@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGINX</title>
+</head>
+<body>
+    <h1>Time: <span id="currentTime"></span></h1>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('currentTime').textContent = timeString;
+        }
+        
+        // Обновляем время сразу при загрузке страницы
+        updateTime();
+        
+        // Обновляем время каждую секунду
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
